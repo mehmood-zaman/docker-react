@@ -6,4 +6,4 @@ services:
     -docker build -t mehmoodzaman/docker-react -f dockerFile.dev .
 
 script:
-  -docker run mehmoodzaman/docker-react npm run test -- --coverage
+      - docker run -e CI=true mehmoodzaman/docker-react npm run test
